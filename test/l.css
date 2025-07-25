@@ -1,0 +1,39 @@
+h1 ,
+#tiQ {
+    font-size: 50px;
+    text-align: center;
+    font-weight: 300;
+    font-family: "微软雅黑";
+}
+table,th,td {
+    text-align: center;
+    border: 1px solid black;
+    border-collapse: collapse;
+}
+table tr {
+    height: 40px;
+}
+.ty {
+    width: 1600px;
+}
+
+/* 第一个表中的查询 */
+#Q1 {
+    background-color: blue;
+}
+table a {
+    
+    color: white;
+    text-decoration: none;
+}
+
+
+/* 关于隐藏的表格的按键 */
+#ycbg {
+    background-color: rgb(237, 176, 85);
+    font-size: 30px;
+}
+
+/* 关于费用的修改*/
+
+

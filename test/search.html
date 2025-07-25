@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>查询页面</title>
+    <link rel="stylesheet" href="./l.css">
+    <style>
+        /* 样式定义（辅助观察效果） */
+        table {
+        width: 100%;
+        border-collapse: collapse;
+        }
+        th, td {
+        border: 1px solid #ccc;
+        padding: 8px;
+        text-align: center;
+        }
+        tr.hidden {
+        display: none;
+        }
+        .highlight {
+        background-color: yellow; /* 高亮颜色 */
+        }
+    </style>
+</head>
+<body>
+    <div>
+        <table class="ty">
+            <caption id="tiQ">查询窗口</caption>
+            <thead>
+                <tr>
+                    <th>单号</th>
+                    <th>
+                        <a name="rdt1">
+                            <input 
+                            type="text"
+                            id="search1"
+                            placeholder="输入系统订单号/运单号/客户单号/转单号查询"
+                            oninput="highlightCells()"
+                        >
+                        </a>
+                    </th>
+                    <th>收件日期</th>
+                    <th>2025/3/1</th>
+                    <th>2025/3/31</th>
+                    <th>客户</th>
+                    <th></th>
+                    <th>是否已做费用</th>
+                    <th>%-默认全部</th>
+                    <th></th>
+                    <th>查询</th>
+                    <th></th>
+                    <th></th>
+                    <th></th>
+                </tr>
+                <tr>
+                    <th>系统单号</th>
+                    <th>客户名称</th>
+                    <th>收件日期</th>
+                    <th>运单号</th>
+                    <th>客户单号</th>
+                    <th>fba号</th>
+                    <th>转单号</th>
+                    <th>件数</th>
+                    <th>计费重</th>
+                    <th>渠道</th>
+                    <th>仓库代码</th>
+                    <th>业务员</th>
+                    <th>邮编</th>
+                    <th>国家</th>
+                </tr>
+            </thead>
+            <tbody id="table-body">
+                <tr>
+                    <td>orderno</td>
+                    <td>supname</td>
+                    <td>sjdate</td>
+                    <td>packno</td>
+                    <td>supcode</td>
+                    <td>fbano</td>
+                    <td vertical-align: bottom>zycode</td>
+                    <td>jcnt</td>
+                    <td>qyjf_weit</td>
+                    <td>channelname</td>
+                    <td>deladdressnm</td>
+                    <td>salesman</td>
+                    <td>postno</td>
+                    <td>dest</td>
+                </tr>
+                <tr>
+                    <td>YD00325060400003</td>
+                    <td>测试客户赵</td>
+                    <td>2025/6/28</td>
+                    <td>LLGGXX2506040003</td>
+                    <td>11111</td>
+                    <td>3004</td>
+                    <td></td>
+                    <td>11</td>
+                    <td>44</td>
+                    <td>美国海运卡派</td>
+                    <td>ONT8</td>
+                    <td>张三</td>
+                    <td>92551</td>
+                    <td>美国</td>
+                </tr>
+                <tr>
+                    <td>YD00325062700006</td>
+                    <td>测试客户赵</td>
+                    <td>2025/6/27</td>
+                    <td>nn2506270006</td>
+                    <td>2222</td>
+                    <td>3004</td>
+                    <td></td>
+                    <td>22</td>
+                    <td>55</td>
+                    <td>美国海运卡派</td>
+                    <td>LGB8</td>
+                    <td></td>
+                    <td>92551</td>
+                    <td>美国</td>
+                </tr>
+                <tr>
+                    <td>YD00325062700003</td>
+                    <td>测试客户赵</td>
+                    <td>2025/6/27</td>
+                    <td>nn2506270003</td>
+                    <td>3333</td>
+                    <td>3004</td>
+                    <td></td>
+                    <td>33</td>
+                    <td>66</td>
+                    <td>美国海运卡派</td>
+                    <td>FTW1</td>
+                    <td></td>
+                    <td>92551</td>
+                    <td>美国</td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td><button id="confirmBtn">确认</button></td>
+                    <td><button id="cancelBtn">取消</button></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+            </tbody>
+        </table>
+        <button id="searchBtn">查询</button>
+    </div>
+    <script src="scp.js"></script>
+</body>
+</html>

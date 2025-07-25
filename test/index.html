@@ -1,0 +1,348 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>业务员成本详情</title>
+    <link rel="stylesheet" href="./l.css">
+</head>
+<body>
+    <h1>业务员成本详情</h1>
+    <!-- 第一个表格 -->
+    <div class="full-screen-container">
+        <table class="ty">
+            <caption>基础信息</caption>
+        <thead>
+            <tr>
+                <th colspan="2">业务帐单号::billcode</th>
+                <th>---</th>
+                <th colspan="2">*系统订单号:frombillno</th>
+                <th></th>
+                <th>*费用月份：mon</th>
+                <th>锁帐月份：lockmon</th>
+                <th>---</th>
+                <th colspan="2">单据备注:remark</th>
+                </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td colspan="2">ZYZ0032308210002</td>
+                <td></td>
+                <td colspan="2">Z00321040200002</td>
+                <td id="Q1"><a href="search.html#rdt1" target="_blank">查询</a></td>
+                <td>202503</td>
+                <td>202503</td>
+                <td></td>
+                <td></td>
+                <td></td>
+            </tr>
+            <tr>
+                <td colspan="11" >-</td>
+            </tr>
+            <tr>
+                <td colspan="2">发货代理fhsupname:</td>
+                <td></td>
+                <td colspan="2">客户:supname</td>
+                <td></td>
+                <td>运单号:packno</td>
+                <td>客户单号:supcode</td>
+                <td></td>
+                <td>FBA号fbano</td>
+                <td>转单号zycode</td>
+            </tr>
+            <tr>
+                <td colspan="2">货拉拉</td>
+                <td></td>
+                <td colspan="2">宇腾信息科技有限公司</td>
+                <td></td>
+                <td>45064</td>
+                <td>YMLU89778XX</td>
+                <td></td>
+                <td>YMLU89778XX</td>
+                <td>YMLU89778XX</td>
+            </tr>
+            <tr>
+                <td colspan="11">-</td>
+            </tr>
+            <tr>
+                <td>收件日期:sjdate</td>
+                <td>收件时间:sjtime</td>
+                <td></td>
+                <td colspan="2">渠道类型:channelname</td>
+                <td></td>
+                <td>地址类型:w_orgno</td>
+                <td>仓库代码:deladdressnm</td>
+                <td></td>
+                <td>目的地:countryname</td>
+                <td>邮编postno</td>
+            </tr>
+            <tr>
+                <td>2025/3/25</td>
+                <td>11:20:00</td>
+                <td></td>
+                <td colspan="2">美国空运快递派</td>
+                <td></td>
+                <td>亚马逊地址</td>
+                <td>ONT8</td>
+                <td></td>
+                <td>美西</td>
+                <td>92551</td>
+            </tr>
+            <tr>
+                <td colspan="11">-</td>
+            </tr>
+            <tr>
+                <td>业务价格zyprice</td>
+                <td>运输类型typeno</td>
+                <td></td>
+                <td colspan="2">转运渠道:zmqd</td>
+                <td></td>
+                <td colspan="2">产品大类smatname</td>
+                <td></td>
+                <td colspan="2">预报单号yubaono</td>
+            </tr>
+            <tr>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td colspan="2">美国空运快递派</td>
+                <td></td>
+                <td colspan="2">US1类,带磁,带电,电器类</td>
+                <td></td>
+                <td colspan="2">5</td>
+            </tr>
+            <tr>
+                <td colspan="11">-</td>
+            </tr>
+            <tr>
+                <td>系统单价xtdj</td>
+                <td>总申报额ccvalue</td>
+                <td></td>
+                <td>总件数jcnt</td>
+                <td>实重ycz_weit</td>
+                <td></td>
+                <td>总材重ysj_weit</td>
+                <td>方数ycbm_qty</td>
+                <td></td>
+                <td>确认计费重qyjf_weit</td>
+                <td>原收货仓：organo</td>
+            </tr>
+            <tr>
+                <td>5</td>
+                <td>5</td>
+                <td></td>
+                <td>5</td>
+                <td>5</td>
+                <td></td>
+                <td>5</td>
+                <td>5</td>
+                <td></td>
+                <td>5</td>
+                <td>福永仓</td>
+            </tr>
+            <tr>
+                <td colspan="11">-</td>
+            </tr>
+            <tr>
+                <td colspan="2">财务备注remark1</td>
+                <td></td>
+                <td colspan="2">内部备注nremark</td>
+                <td></td>
+                <td colspan="2">外部备注wremark</td>
+                <td></td>
+                <td colspan="2">客服备注khremark</td>
+            </tr>
+            <tr>
+                <td colspan="2">5</td>
+                <td></td>
+                <td colspan="2">5</td>
+                <td></td>
+                <td colspan="2">5</td>
+                <td></td>
+                <td colspan="2">5</td>
+            </tr>
+            <tr>
+                <td colspan="11">-</td>
+            </tr>
+            
+        </tbody>
+        </table>
+        <br>
+        <!-- 第二个表格-->
+        <button id="ycbg">其他信息</button>
+        <table class="ty" id="yctable" style="display: none; ">
+            <caption>其他信息</caption>
+            <thead>
+                <tr>
+                    <th colspan="2">导入批次号:importno</th>
+                    <th>--</th>
+                    <th>是否审核:status</th>
+                    <th>审核日期:checkdate</th>
+                    <th>--</th>
+                    <th>建立人:created_by</th>
+                    <th>建立日期:created_date</th>
+                    <th>--</th>
+                    <th>修改人:mod_by</th>
+                    <th>修改日期:mod_date</th>
+                </tr>
+            </thead>
+            <tbody>
+            <tr>
+                <td colspan="2">45064</td>
+                <td></td>
+                <td>已审</td>
+                <td>2025/3/25</td>
+                <td></td>
+                <td>张三</td>
+                <td>2025/3/25</td>
+                <td></td>
+                <td>张三</td>
+                <td>2025/3/25</td>
+            </tr>
+            <tr>
+                    <td><button>新增</button></td>
+                    <td><button>保存</button></td>
+                    <td><button>审核</button></td>
+                    <td><button>关闭</button></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+    <br>
+    <!-- 第三个表格-->
+    <div>
+        <table class="ty">
+            <caption>费用明细信息</caption>
+            <thead>
+                <tr>
+                    <th></th>
+                    <th>行序号</th>
+                    <th>direct</th>
+                    <th>costno</th>
+                    <th>currency</th>
+                    <th>rate</th>
+                    <th>prounit</th>
+                    <th>zqty</th>
+                    <th>zprice</th>
+                    <th>zfamount</th>
+                    <th>zramount</th>
+                    <th>remark</th>
+                    <th>zexpname</th>
+                    <th>yjcode</th>
+                    <th>oldprice</th>
+                    <th>oldamt</th>
+                    <th>oldramt</th>
+                    <th>cmpflg</th>
+                    <th>importno</th>
+                </tr>
+                <tr>
+                    <th></th>
+                    <th></th>
+                    <th>加减</th>
+                    <th>费用类型名称</th>
+                    <th>币别</th>
+                    <th>汇率</th>
+                    <th>单位</th>
+                    <th>数量</th>
+                    <th>单价</th>
+                    <th>金额</th>
+                    <th>本位金额</th>
+                    <th>备注</th>
+                    <th>计算公式</th>
+                    <th>异价单号</th>
+                    <th>系统单价</th>
+                    <th>系统金额</th>
+                    <th>系统本位币金额</th>
+                    <th>资料来源</th>
+                    <th>导入批次号</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr id="add-row">
+                    <td><button>删除</button></td>
+                    <td>1</td>
+                    <td>加收</td>
+                    <td>运费</td>
+                    <td>人民币</td>
+                    <td>1.000</td>
+                    <td>KGS</td>
+                    <td>132.00</td>
+                    <td>9.00</td>
+                    <td>1188.00</td>
+                    <td>1188.00</td>
+                    <td></td>
+                    <td>(132.0000*9.0000)*1.0000*1.0000</td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td><button>删除</button></td>
+                    <td>2</td>
+                    <td>加收</td>
+                    <td>关税预收</td>
+                    <td>英镑</td>
+                    <td>0.000</td>
+                    <td>票</td>
+                    <td>450.00</td>
+                    <td>0.26</td>
+                    <td>115.88</td>
+                    <td>1042.92</td>
+                    <td></td>
+                    <td>450.00*0.26=115.88</td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td>合计</td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td>1303.88</td>
+                    <td>2230.92</td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>-</td>
+                    <td colspan="11"><button>添加费用</button>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<button>保存</button>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<button>关闭</button></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+                
+            </tbody>
+        </table>
+    </div>
+    <br>
+    <script src="scp.js"></script>
+</body>
+</html>
